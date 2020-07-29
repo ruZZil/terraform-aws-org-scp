@@ -40,6 +40,12 @@ variable "require_s3_encryption_target_ids" {
   default     = []
 }
 
+variable "require_s3_AES256_encryption_target_ids" {
+  description = "Target ids (AWS Account or Organizational Unit) to attach an SCP requiring S3 AES256 encryption"
+  type        = list(string)
+  default     = []
+}
+
 variable "deny_deleting_cloudwatch_logs_target_ids" {
   description = "Target ids (AWS Account or Organizational Unit) to attach an SCP denying deletion of CloudWatch, flowlogs,  log groups, or log streams"
   type        = list(string)
